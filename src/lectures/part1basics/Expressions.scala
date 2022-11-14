@@ -1,5 +1,5 @@
 package lectures.part1basics
 
-object Expressions {
+object Expressions extends App {
 
 }
