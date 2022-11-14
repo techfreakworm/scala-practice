@@ -75,6 +75,26 @@ object Functions extends App{
   println(isPrime(2003))
   println(isPrime(37*17))
 
+  def isPrimeNew(n: Int): Boolean = {
+    def isPrimeUntil(num: Int, divisor: Int): Boolean = {
+      // Base cases// Base cases
+
+      if (num < 2) false
+      if (num == 2) true
+      if (num % divisor == 0)  true
+      // Check for next divisor
+      isPrimeUntil(num, divisor + 1)
+    }
+
+    isPrimeUntil(n,2)
+  }
+
+  println("New Prime algo")
+  println(isPrime(2))
+  println(isPrime(37))
+  println(isPrime(2003))
+  println(isPrime(37 * 17))
+  println(isPrime(293))
 
 
 
