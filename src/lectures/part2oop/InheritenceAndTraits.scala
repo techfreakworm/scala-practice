@@ -3,7 +3,7 @@ package lectures.part2oop
 object InheritenceAndTraits extends App{
 
   // single class inheritence
-  class Animal {
+  sealed class Animal {
     val creatureType = "Wild"
     def eat = println("nomnomnom")
   }
@@ -28,7 +28,10 @@ object InheritenceAndTraits extends App{
   // overriding
   class Dog(override val creatureType: String) extends Animal {
 //    override val creatureType: String = "domestic"
-    override def eat = println("crunch, crunch")
+    override def eat = {
+      super.eat
+      println("crunch, crunch")
+    }
   }
   val dog =  new Dog("K9")
   dog.eat
@@ -41,5 +44,11 @@ object InheritenceAndTraits extends App{
   // OVERRIDING vs OVERLOADING
 
   // super
+
+  // preventing overrides
+  // 1 - use final keyword on member
+  // 2 - use final keyword on the entire class
+  // 3 - seal the class = extend classes in THIS FILE, prevent EXTENSION IN OTHER FILES
+
 
 }
