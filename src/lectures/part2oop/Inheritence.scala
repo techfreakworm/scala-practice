@@ -1,6 +1,6 @@
 package lectures.part2oop
 
-object InheritenceAndTraits extends App{
+object Inheritence extends App{
 
   // single class inheritence
   sealed class Animal {
