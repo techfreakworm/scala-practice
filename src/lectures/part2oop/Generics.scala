@@ -7,7 +7,7 @@ object Generics extends App {
     /*
       A = Cat
       B = Dog -> Animal
-      then it gives MyList of Animals
+      then it gives MyList of animals
      */
   }
 
@@ -18,11 +18,11 @@ object Generics extends App {
 
   // Generic methods
 
-  object MyList {
-    def empty[A]: MyList[A] = ???
-  }
+//  object MyList {
+//    def empty[A]: MyList[A] = ???
+//  }
 
-  val emptyListOfIntegers = MyList.empty[Int]
+//  val emptyListOfIntegers = MyList.empty[Int]
 
   // variance problem
   class Animal
