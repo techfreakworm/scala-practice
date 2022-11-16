@@ -2,8 +2,13 @@ package lectures.part2oop
 
 object Generics extends App {
 
-  class MyList[A] {
-    // Use type A inside class definition
+  class MyList[+A] {
+    def add[B >: A](element: B): MyList[B] = ???
+    /*
+      A = Cat
+      B = Dog -> Animal
+      then it gives MyList of Animals
+     */
   }
 
   class MyMap[Key, Value]
@@ -33,7 +38,7 @@ object Generics extends App {
   val animal: Animal = new Cat
   val animalList: CovariantList[Animal] = new CovariantList[Cat]
 
-  // animalList.add(new Dog) ??? HARD QUESTION
+  // animalList.add(new Dog) ??? HARD QUESTION ==> We return a list of animals
 
   // 2. NO = INVARIANCE
   class InvariantList[A]
