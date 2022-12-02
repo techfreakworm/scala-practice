@@ -11,7 +11,7 @@ object Functions extends App{
   def aParameterlessFunction(): Int = 42
 
   println(aParameterlessFunction())
-  println(aParameterlessFunction)
+//  println(aParameterlessFunction)
 
   def aRepeatedFunction(aString: String, n: Int): String = {
     if (n == 1) aString
